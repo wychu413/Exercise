@@ -19,6 +19,7 @@ def maximum_unit_truck(*, box_types: List[List[int]], truck_size: int) -> int:
         *map(lambda x: [x[1]] * x[0], box_types)), reverse=True)
     
     return sum(itertools.islice(flatten, truck_size))
-    
+
+# Driver Code -- Testing
 assert maximum_unit_truck(box_types=[[1,3],[2,2],[3,1]], truck_size=4) == 8
 assert maximum_unit_truck(box_types=[[5,10],[2,5],[4,7],[3,9]], truck_size=10) == 91
