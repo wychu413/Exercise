@@ -11,7 +11,7 @@ def longest_palindrome(s: str) -> int:
     ret = 0
     carrier = 0
     if len(s) == 0: return ret
-    for v in Counter(s).itervalues():
+    for v in Counter(s).values():
         if v % 2 == 0:
             ret += v
         elif v % 2 == 1 and v > 1:
