@@ -1,8 +1,9 @@
 from typing import List
 import itertools
 
+"""Leet code 1710. Maximum Units on a Truck
+"""
 
-# first parameter is the 
 def maximum_unit_truck(*, box_types: List[List[int]], truck_size: int) -> int:
     """Find the Maximum unit of boxes that can be put on the trucks
     Solution: Greedy Algorithm
