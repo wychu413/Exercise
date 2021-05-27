@@ -16,7 +16,7 @@ def longest_palindromic_substring(s: str) -> str:
             ptr2 -= 1
         return (ptr1 >= ptr2)
     
-    def helper(s, memo={}):
+    def memoization(s, memo={}):
         if not s: return ""
         if s in memo.keys(): return memo[s]
         
@@ -36,7 +36,7 @@ def longest_palindromic_substring(s: str) -> str:
         if len(xs) > len(ys): return xs
         else: return ys
     
-    return helper(s)
+    return memoization(s)
 
 assert longest_palindromic_substring("babad") == "bab"
 assert longest_palindromic_substring("cbbd") == "bb"
